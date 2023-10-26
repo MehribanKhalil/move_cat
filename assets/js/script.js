@@ -6,7 +6,7 @@ let windowWidth = window.innerWidth;
 let windowHeight = window.innerHeight;
 
 document.body.addEventListener("keyup", (e) => {
-    if (e.key==='a' || e.keyCode===37) {
+    if (e.key==='a' || e.key === "ArrowLeft") {
         //left
         if (x > 0) {
         x -= speed;
@@ -14,7 +14,7 @@ document.body.addEventListener("keyup", (e) => {
         cat.style.transform = "rotate(270deg)";
         }
     }
-     else if (e.key === "d" || e.keyCode===39) {
+     else if (e.key === "d" || e.key === "ArrowRight") {
           //right
           if (x + 210 < windowWidth) {
             x += speed;
@@ -22,15 +22,15 @@ document.body.addEventListener("keyup", (e) => {
             cat.style.transform = "rotate(90deg)";
             }
         }
-    else if (e.key === "w" || e.keyCode===38) {
-          //top
+    else if (e.key === "w" || e.key === "ArrowUp") {
+          //up
           if (y > 0) {
             y -= speed;
             cat.style.top = y + "px";
             cat.style.transform = "rotate(-0deg)";
             }
     }
-    else if (e.key === "s" || e.keyCode===40) {
+    else if (e.key === "s" || e.key === "ArrowDown") {
       //down
       if (y + 220 < windowHeight) {
         y += speed;
